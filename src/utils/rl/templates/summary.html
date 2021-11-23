@@ -1,0 +1,49 @@
+<html>
+ <head>
+    <style>
+    {
+        box-sizing: border-box;
+    }
+    /* Set additional styling options for the columns*/
+    .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    flex: 1;
+    width: 800px;
+    padding: 10px;
+    }
+    .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    }
+    </style>
+ </head>
+ <body>
+    <div class="row">
+     <div class="column" style="background-color:#FFB695;">
+       <h3>{{ mode }}: Epoch {{ epoch }}</h3>
+       <p>{{ dial.image_filename }}</p>
+       <p>Target: {{ dial.target_id }}</p>
+       <p></p>
+       <img src="{{ dial.file_path }}" alt="{{ dial.image_filename }}", width="480" height="320">
+         <h3>Dialogue</h3>
+         {% for  qa in dial.qas %}
+         Q{{ loop.index }}
+         <ul>
+           <li>Question: {{ qa.question }}</li>
+           <li>Answer: {{ qa.answer }}</li>
+           <li>Prediction: {{ qa.prediction }}</li>
+          {% if qa.split_action %}
+            <li>Split Action: {{ qa.split_action }}</li>
+          {% endif %}
+         </ul>
+         {% endfor %}
+         <p>Submitted: {{ dial.submitted_id }} === Results: {{ dial.results }}</p>
+     </div>
+    </div>
+ </body>
+</html>

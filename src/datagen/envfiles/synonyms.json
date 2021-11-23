@@ -1,0 +1,20 @@
+{
+  "thing": ["thing", "object"],
+  "sphere": ["sphere", "ball"],
+  "cube": ["cube", "block"],
+  "cone": ["cone", "funnel"],
+  "large": ["large", "big"],
+  "small": ["small", "tiny"],
+  "medium": ["medim"],
+  "xsmall": ["xsmall", "super tiny"],
+  "metal": ["metallic", "metal", "shiny"],
+  "rubber": ["rubber", "matte"],
+  "marble": ["marble", "stone"],
+  "glass": ["glass"],
+  "left": ["left of", "to the left of", "on the left side of"],
+  "right": ["right of", "to the right of", "on the right side of"],
+  "behind": ["behind"],
+  "front": ["in front of"],
+  "above": ["above"],
+  "below": ["below"]
+}

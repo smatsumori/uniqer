@@ -1,0 +1,41 @@
+# running command
+# [TRAINING]
+# $ pipenv run python src/main.py --train_rl --yaml_path params/single_tf_rl.yaml
+# [EVALUATION]
+# $ pipenv run python src/main.py --check_rl --yaml_path params/single_tf_rl.yaml
+
+
+image_data_version: "CLEVR_Ask3"
+question_data_version: "M85k3"
+
+# Load and save directory should be differents in RL mode
+save_dir: "results/checkpoints/ask3_uniqer_rl"
+load_dir: "results/checkpoints/ask3_uniqer"
+
+seed: 1
+gpu_id: 0
+
+proposed_model_mode: true
+rl_single_tf_mode: true
+split_obj_model_mode: true
+
+# hyper parameters
+n_max_questions: 5
+rl_lr: 0.0005   # others
+rl_freeze: true
+rl_epochs: 150
+
+# Turn Discount
+discounted_corr: true
+turn_discount_coeff: 0.2
+
+# -----------------------------------------------------------------------------
+# Data Paths
+metadata_path: "src/datagen/envfiles/metadata_<IMAGE_DATA_V>.json"
+load_train_context_feature: "results/image_vec_<IMAGE_DATA_V>/train/resnet101_23.npz"
+load_val_context_feature: "results/image_vec_<IMAGE_DATA_V>/val/resnet101_23.npz"
+load_test_context_feature: "results/image_vec_<IMAGE_DATA_V>/test/resnet101_23.npz"
+
+load_train_cropped_feature: "results/image_vec_<IMAGE_DATA_V>/cropped_images/train/resnet34_7.npz"
+load_val_cropped_feature: "results/image_vec_<IMAGE_DATA_V>/cropped_images/val/resnet34_7.npz"
+load_test_cropped_feature: "results/image_vec_<IMAGE_DATA_V>/cropped_images/test/resnet34_7.npz"

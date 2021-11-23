@@ -1,0 +1,50 @@
+[2020/07/25 21:33:39.331] DEBUG (31124) cmd.py: Popen(['git', 'version'], cwd=/root/ivqg, universal_newlines=False, shell=None, istream=None)
+[2020/07/25 21:33:39.339] DEBUG (31124) cmd.py: Popen(['git', 'version'], cwd=/root/ivqg, universal_newlines=False, shell=None, istream=None)
+[2020/07/25 21:33:39.413]  INFO (31124) main.py: script start!
+[2020/07/25 21:33:39.488]  INFO (31124) main.py: gpu id updated to 2 from 4
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py: ================================================================================
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:      Arguments                 |     Values
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py: --------------------------------------------------------------------------------
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_resnet                   : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_generator                : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_state_encoder            : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_guesser                  : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_tmp_linear               : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_train_context_feature    : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_val_context_feature      : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_train_cropped_feature    : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  load_val_cropped_feature      : None
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  save_generator                : results/checkpoints/generator_model_20200725_2133.pt
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  save_guesser                  : results/checkpoints/guesser_model_20200725_2133.pt
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  save_state_encoder            : results/checkpoints/state_encoder_model_20200725_2133.pt
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  save_tmp_linear               : results/checkpoints/tmp_linear_model_20200725_2133.pt
+[2020/07/25 21:33:39.488]  INFO (31124) arguments.py:  vocab_path                    : data/ask/savedata/vocab.json
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  metadata_path                 : src/modules/oracle/sample/metadata.json
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  scene_train_path              : data/CLEVR_v1.0/scenes/CLEVR_train_scenes.json
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  scene_val_path                : data/CLEVR_v1.0/scenes/CLEVR_val_scenes.json
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  mlflow_save_path              : results/mlruns
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  mlflow_exp                    : 20200725_2133
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  lr                            : 0.001
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  batch_size                    : 1024
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  epochs                        : 300
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  patience                      : 5
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  gen_seq_len                   : 7
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  bottleneck_id                 : -1
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  context_img_enc_dim           : 2048
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  cropped_img_enc_dim           : 2048
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  qa_state_enc_dim              : 256
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  debug_dl                      : False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  question_generation           : True
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  question_setup                : False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  context_image_embedding_generation: False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  cropped_image_embedding_generation: False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  train_generator               : False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  train_guesser                 : False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  check_generator               : False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  check_guesser                 : False
+[2020/07/25 21:33:39.489]  INFO (31124) arguments.py:  seed                          : 76
+[2020/07/25 21:33:39.490]  INFO (31124) arguments.py:  gpu_id                        : 2
+[2020/07/25 21:33:39.490]  INFO (31124) arguments.py:  multi_gpu                     : False
+[2020/07/25 21:33:39.490]  INFO (31124) arguments.py:  running_reward                : 0.99
+[2020/07/25 21:33:39.490]  INFO (31124) arguments.py:  rl_save_model_interval        : 100
+[2020/07/25 21:33:39.490]  INFO (31124) arguments.py: ================================================================================

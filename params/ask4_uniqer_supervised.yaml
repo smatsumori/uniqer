@@ -1,0 +1,42 @@
+# running command
+# [TRAINING]
+# $ pipenv run python src/main.py --train_single_tf --yaml_path params/uniqer_supervised.yaml
+# [EVALUATION]
+# $ pipenv run python src/main.py --check_single_tf --yaml_path params/uniqer_supervised.yaml
+
+# Ask3
+image_data_version: "CLEVR_Ask4"
+question_data_version: "M85k4"
+
+# Save directory path
+save_dir: "results/checkpoints/ask4_uniqer"
+
+gpu_id: 0
+
+# Model configs
+proposed_model_mode: true  # should be True
+split_obj_model_mode: true  # should be True
+proposed_q_gen_top_k: 5  # splitter's top-k
+
+# Hyper Parameters
+batch_size: 1024
+epochs: 1000
+patience: 50
+
+lr: 0.00005
+adabelief: true
+num_warmup_epochs: 20  # activate warmup when argument is not 0
+obj_memory_only: true  # as a memory, only use object embeddings from transformer encoder
+
+context_img_enc_dim: 1024
+cropped_img_enc_dim: 256
+
+
+# Data Paths
+load_train_context_feature: "results/image_vec_<IMAGE_DATA_V>/train/resnet101_23.npz"
+load_val_context_feature: "results/image_vec_<IMAGE_DATA_V>/val/resnet101_23.npz"
+load_test_context_feature: "results/image_vec_<IMAGE_DATA_V>/test/resnet101_23.npz"
+
+load_train_cropped_feature: "results/image_vec_<IMAGE_DATA_V>/cropped_images/train/resnet34_7.npz"
+load_val_cropped_feature: "results/image_vec_<IMAGE_DATA_V>/cropped_images/val/resnet34_7.npz"
+load_test_cropped_feature: "results/image_vec_<IMAGE_DATA_V>/cropped_images/test/resnet34_7.npz"
